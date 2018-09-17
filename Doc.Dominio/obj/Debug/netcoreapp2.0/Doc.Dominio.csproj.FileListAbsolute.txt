@@ -6,3 +6,12 @@ C:\Users\Felipe\source\repos\Doc\Doc.Dominio\obj\Debug\netcoreapp2.0\Doc.Dominio
 C:\Users\Felipe\source\repos\Doc\Doc.Dominio\obj\Debug\netcoreapp2.0\Doc.Dominio.AssemblyInfo.cs
 C:\Users\Felipe\source\repos\Doc\Doc.Dominio\obj\Debug\netcoreapp2.0\Doc.Dominio.dll
 C:\Users\Felipe\source\repos\Doc\Doc.Dominio\obj\Debug\netcoreapp2.0\Doc.Dominio.pdb
+C:\Users\Dev01\Source\Repos\doc\Doc.Dominio\bin\Debug\netcoreapp2.0\Doc.Dominio.deps.json
+C:\Users\Dev01\Source\Repos\doc\Doc.Dominio\bin\Debug\netcoreapp2.0\Doc.Dominio.dll
+C:\Users\Dev01\Source\Repos\doc\Doc.Dominio\bin\Debug\netcoreapp2.0\Doc.Dominio.pdb
+C:\Users\Dev01\Source\Repos\doc\Doc.Dominio\obj\Debug\netcoreapp2.0\Doc.Dominio.csprojAssemblyReference.cache
+C:\Users\Dev01\Source\Repos\doc\Doc.Dominio\obj\Debug\netcoreapp2.0\Doc.Dominio.csproj.CoreCompileInputs.cache
+C:\Users\Dev01\Source\Repos\doc\Doc.Dominio\obj\Debug\netcoreapp2.0\Doc.Dominio.AssemblyInfoInputs.cache
+C:\Users\Dev01\Source\Repos\doc\Doc.Dominio\obj\Debug\netcoreapp2.0\Doc.Dominio.AssemblyInfo.cs
+C:\Users\Dev01\Source\Repos\doc\Doc.Dominio\obj\Debug\netcoreapp2.0\Doc.Dominio.dll
+C:\Users\Dev01\Source\Repos\doc\Doc.Dominio\obj\Debug\netcoreapp2.0\Doc.Dominio.pdb

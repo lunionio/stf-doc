@@ -443,6 +443,15 @@
           "lib/netstandard1.0/Remotion.Linq.dll": {}
         }
       },
+      "RestSharp/106.3.1": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard2.0/RestSharp.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/RestSharp.dll": {}
+        }
+      },
       "runtime.native.System.Data.SqlClient.sni/4.4.0": {
         "type": "package",
         "dependencies": {
@@ -935,6 +944,20 @@
         },
         "runtime": {
           "bin/placeholder/Doc.Infra.Data.dll": {}
+        }
+      },
+      "Doc.Repositorio/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v2.0",
+        "dependencies": {
+          "Doc.Dominio": "1.0.0",
+          "Doc.Infra.Data": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/Doc.Repositorio.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Doc.Repositorio.dll": {}
         }
       }
     }
@@ -1661,6 +1684,17 @@
         "lib/portable-net45+win+wpa81+wp80/Remotion.Linq.xml",
         "remotion.linq.2.2.0.nupkg.sha512",
         "remotion.linq.nuspec"
+      ]
+    },
+    "RestSharp/106.3.1": {
+      "sha512": "TmlN7SXjK52zzpQDTuzw7IH3XQ2Svtss/4zvQBKIgf74QIVxvlxoAqQYu1EhNQ1bMSBIQ4aK120BO7W+v8/kiQ==",
+      "type": "package",
+      "path": "restsharp/106.3.1",
+      "files": [
+        "lib/net452/RestSharp.dll",
+        "lib/netstandard2.0/RestSharp.dll",
+        "restsharp.106.3.1.nupkg.sha512",
+        "restsharp.nuspec"
       ]
     },
     "runtime.native.System.Data.SqlClient.sni/4.4.0": {
@@ -3441,33 +3475,40 @@
       "type": "project",
       "path": "../Doc.Infra.Data/Doc.Infra.Data.csproj",
       "msbuildProject": "../Doc.Infra.Data/Doc.Infra.Data.csproj"
+    },
+    "Doc.Repositorio/1.0.0": {
+      "type": "project",
+      "path": "../Doc.Repositorio/Doc.Repositorio.csproj",
+      "msbuildProject": "../Doc.Repositorio/Doc.Repositorio.csproj"
     }
   },
   "projectFileDependencyGroups": {
     ".NETCoreApp,Version=v2.0": [
       "Doc.Dominio >= 1.0.0",
       "Doc.Infra.Data >= 1.0.0",
-      "Microsoft.NETCore.App >= 2.0.0"
+      "Doc.Repositorio >= 1.0.0",
+      "Microsoft.NETCore.App >= 2.0.0",
+      "RestSharp >= 106.3.1"
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Felipe\\.nuget\\packages\\": {},
+    "C:\\Users\\Dev01\\.nuget\\packages\\": {},
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "E:\\staffpro\\Doc\\Doc.Infra.Cross\\Doc.Infra.Cross.csproj",
+      "projectUniqueName": "C:\\Users\\Dev01\\Source\\Repos\\doc\\Doc.Infra.Cross\\Doc.Infra.Cross.csproj",
       "projectName": "Doc.Infra.Cross",
-      "projectPath": "E:\\staffpro\\Doc\\Doc.Infra.Cross\\Doc.Infra.Cross.csproj",
-      "packagesPath": "C:\\Users\\Felipe\\.nuget\\packages\\",
-      "outputPath": "E:\\staffpro\\Doc\\Doc.Infra.Cross\\obj\\",
+      "projectPath": "C:\\Users\\Dev01\\Source\\Repos\\doc\\Doc.Infra.Cross\\Doc.Infra.Cross.csproj",
+      "packagesPath": "C:\\Users\\Dev01\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Dev01\\Source\\Repos\\doc\\Doc.Infra.Cross\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
       ],
       "configFilePaths": [
-        "C:\\Users\\Felipe\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Dev01\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -3480,11 +3521,14 @@
       "frameworks": {
         "netcoreapp2.0": {
           "projectReferences": {
-            "E:\\staffpro\\Doc\\Doc.Dominio\\Doc.Dominio.csproj": {
-              "projectPath": "E:\\staffpro\\Doc\\Doc.Dominio\\Doc.Dominio.csproj"
+            "C:\\Users\\Dev01\\Source\\Repos\\doc\\Doc.Dominio\\Doc.Dominio.csproj": {
+              "projectPath": "C:\\Users\\Dev01\\Source\\Repos\\doc\\Doc.Dominio\\Doc.Dominio.csproj"
             },
-            "E:\\staffpro\\Doc\\Doc.Infra.Data\\Doc.Infra.Data.csproj": {
-              "projectPath": "E:\\staffpro\\Doc\\Doc.Infra.Data\\Doc.Infra.Data.csproj"
+            "C:\\Users\\Dev01\\Source\\Repos\\doc\\Doc.Infra.Data\\Doc.Infra.Data.csproj": {
+              "projectPath": "C:\\Users\\Dev01\\Source\\Repos\\doc\\Doc.Infra.Data\\Doc.Infra.Data.csproj"
+            },
+            "C:\\Users\\Dev01\\Source\\Repos\\doc\\Doc.Repositorio\\Doc.Repositorio.csproj": {
+              "projectPath": "C:\\Users\\Dev01\\Source\\Repos\\doc\\Doc.Repositorio\\Doc.Repositorio.csproj"
             }
           }
         }
@@ -3503,6 +3547,10 @@
             "target": "Package",
             "version": "[2.0.0, )",
             "autoReferenced": true
+          },
+          "RestSharp": {
+            "target": "Package",
+            "version": "[106.3.1, )"
           }
         },
         "imports": [

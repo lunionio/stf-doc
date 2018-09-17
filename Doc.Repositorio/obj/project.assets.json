@@ -923,20 +923,6 @@
           "bin/placeholder/Doc.Dominio.dll": {}
         }
       },
-      "Doc.Infra.Cross/1.0.0": {
-        "type": "project",
-        "framework": ".NETCoreApp,Version=v2.0",
-        "dependencies": {
-          "Doc.Dominio": "1.0.0",
-          "Doc.Infra.Data": "1.0.0"
-        },
-        "compile": {
-          "bin/placeholder/Doc.Infra.Cross.dll": {}
-        },
-        "runtime": {
-          "bin/placeholder/Doc.Infra.Cross.dll": {}
-        }
-      },
       "Doc.Infra.Data/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v2.0",
@@ -3451,11 +3437,6 @@
       "path": "../Doc.Dominio/Doc.Dominio.csproj",
       "msbuildProject": "../Doc.Dominio/Doc.Dominio.csproj"
     },
-    "Doc.Infra.Cross/1.0.0": {
-      "type": "project",
-      "path": "../Doc.Infra.Cross/Doc.Infra.Cross.csproj",
-      "msbuildProject": "../Doc.Infra.Cross/Doc.Infra.Cross.csproj"
-    },
     "Doc.Infra.Data/1.0.0": {
       "type": "project",
       "path": "../Doc.Infra.Data/Doc.Infra.Data.csproj",
@@ -3465,29 +3446,28 @@
   "projectFileDependencyGroups": {
     ".NETCoreApp,Version=v2.0": [
       "Doc.Dominio >= 1.0.0",
-      "Doc.Infra.Cross >= 1.0.0",
       "Doc.Infra.Data >= 1.0.0",
       "Microsoft.NETCore.App >= 2.0.0"
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Felipe\\.nuget\\packages\\": {},
+    "C:\\Users\\Dev01\\.nuget\\packages\\": {},
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "E:\\staffpro\\Doc\\Doc.Repositorio\\Doc.Repositorio.csproj",
+      "projectUniqueName": "C:\\Users\\Dev01\\Source\\Repos\\doc\\Doc.Repositorio\\Doc.Repositorio.csproj",
       "projectName": "Doc.Repositorio",
-      "projectPath": "E:\\staffpro\\Doc\\Doc.Repositorio\\Doc.Repositorio.csproj",
-      "packagesPath": "C:\\Users\\Felipe\\.nuget\\packages\\",
-      "outputPath": "E:\\staffpro\\Doc\\Doc.Repositorio\\obj\\",
+      "projectPath": "C:\\Users\\Dev01\\Source\\Repos\\doc\\Doc.Repositorio\\Doc.Repositorio.csproj",
+      "packagesPath": "C:\\Users\\Dev01\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Dev01\\Source\\Repos\\doc\\Doc.Repositorio\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
       ],
       "configFilePaths": [
-        "C:\\Users\\Felipe\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Dev01\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -3500,14 +3480,11 @@
       "frameworks": {
         "netcoreapp2.0": {
           "projectReferences": {
-            "E:\\staffpro\\Doc\\Doc.Dominio\\Doc.Dominio.csproj": {
-              "projectPath": "E:\\staffpro\\Doc\\Doc.Dominio\\Doc.Dominio.csproj"
+            "C:\\Users\\Dev01\\Source\\Repos\\doc\\Doc.Dominio\\Doc.Dominio.csproj": {
+              "projectPath": "C:\\Users\\Dev01\\Source\\Repos\\doc\\Doc.Dominio\\Doc.Dominio.csproj"
             },
-            "E:\\staffpro\\Doc\\Doc.Infra.Cross\\Doc.Infra.Cross.csproj": {
-              "projectPath": "E:\\staffpro\\Doc\\Doc.Infra.Cross\\Doc.Infra.Cross.csproj"
-            },
-            "E:\\staffpro\\Doc\\Doc.Infra.Data\\Doc.Infra.Data.csproj": {
-              "projectPath": "E:\\staffpro\\Doc\\Doc.Infra.Data\\Doc.Infra.Data.csproj"
+            "C:\\Users\\Dev01\\Source\\Repos\\doc\\Doc.Infra.Data\\Doc.Infra.Data.csproj": {
+              "projectPath": "C:\\Users\\Dev01\\Source\\Repos\\doc\\Doc.Infra.Data\\Doc.Infra.Data.csproj"
             }
           }
         }

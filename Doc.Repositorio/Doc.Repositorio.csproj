@@ -6,7 +6,6 @@
 
   <ItemGroup>
     <ProjectReference Include="..\Doc.Dominio\Doc.Dominio.csproj" />
-    <ProjectReference Include="..\Doc.Infra.Cross\Doc.Infra.Cross.csproj" />
     <ProjectReference Include="..\Doc.Infra.Data\Doc.Infra.Data.csproj" />
   </ItemGroup>
 
