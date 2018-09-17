@@ -1,0 +1,8 @@
+C:\Users\Felipe\source\repos\Doc\Doc.Dominio\bin\Debug\netcoreapp2.0\Doc.Dominio.deps.json
+C:\Users\Felipe\source\repos\Doc\Doc.Dominio\bin\Debug\netcoreapp2.0\Doc.Dominio.dll
+C:\Users\Felipe\source\repos\Doc\Doc.Dominio\bin\Debug\netcoreapp2.0\Doc.Dominio.pdb
+C:\Users\Felipe\source\repos\Doc\Doc.Dominio\obj\Debug\netcoreapp2.0\Doc.Dominio.csproj.CoreCompileInputs.cache
+C:\Users\Felipe\source\repos\Doc\Doc.Dominio\obj\Debug\netcoreapp2.0\Doc.Dominio.AssemblyInfoInputs.cache
+C:\Users\Felipe\source\repos\Doc\Doc.Dominio\obj\Debug\netcoreapp2.0\Doc.Dominio.AssemblyInfo.cs
+C:\Users\Felipe\source\repos\Doc\Doc.Dominio\obj\Debug\netcoreapp2.0\Doc.Dominio.dll
+C:\Users\Felipe\source\repos\Doc\Doc.Dominio\obj\Debug\netcoreapp2.0\Doc.Dominio.pdb

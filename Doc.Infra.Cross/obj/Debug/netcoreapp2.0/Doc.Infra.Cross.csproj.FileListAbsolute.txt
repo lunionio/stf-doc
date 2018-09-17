@@ -1,0 +1,14 @@
+C:\Users\Felipe\source\repos\Doc\Doc.Infra.Cross\bin\Debug\netcoreapp2.0\Doc.Infra.Cross.deps.json
+C:\Users\Felipe\source\repos\Doc\Doc.Infra.Cross\bin\Debug\netcoreapp2.0\Doc.Infra.Cross.dll
+C:\Users\Felipe\source\repos\Doc\Doc.Infra.Cross\bin\Debug\netcoreapp2.0\Doc.Infra.Cross.pdb
+C:\Users\Felipe\source\repos\Doc\Doc.Infra.Cross\bin\Debug\netcoreapp2.0\Doc.Dominio.dll
+C:\Users\Felipe\source\repos\Doc\Doc.Infra.Cross\bin\Debug\netcoreapp2.0\Doc.Infra.Data.dll
+C:\Users\Felipe\source\repos\Doc\Doc.Infra.Cross\bin\Debug\netcoreapp2.0\Doc.Dominio.pdb
+C:\Users\Felipe\source\repos\Doc\Doc.Infra.Cross\bin\Debug\netcoreapp2.0\Doc.Infra.Data.pdb
+C:\Users\Felipe\source\repos\Doc\Doc.Infra.Cross\obj\Debug\netcoreapp2.0\Doc.Infra.Cross.csprojAssemblyReference.cache
+C:\Users\Felipe\source\repos\Doc\Doc.Infra.Cross\obj\Debug\netcoreapp2.0\Doc.Infra.Cross.csproj.CoreCompileInputs.cache
+C:\Users\Felipe\source\repos\Doc\Doc.Infra.Cross\obj\Debug\netcoreapp2.0\Doc.Infra.Cross.AssemblyInfoInputs.cache
+C:\Users\Felipe\source\repos\Doc\Doc.Infra.Cross\obj\Debug\netcoreapp2.0\Doc.Infra.Cross.AssemblyInfo.cs
+C:\Users\Felipe\source\repos\Doc\Doc.Infra.Cross\obj\Debug\netcoreapp2.0\Doc.Infra.Cross.csproj.CopyComplete
+C:\Users\Felipe\source\repos\Doc\Doc.Infra.Cross\obj\Debug\netcoreapp2.0\Doc.Infra.Cross.dll
+C:\Users\Felipe\source\repos\Doc\Doc.Infra.Cross\obj\Debug\netcoreapp2.0\Doc.Infra.Cross.pdb

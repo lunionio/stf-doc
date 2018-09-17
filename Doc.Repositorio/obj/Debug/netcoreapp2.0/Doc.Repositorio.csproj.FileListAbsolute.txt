@@ -1,0 +1,16 @@
+C:\Users\Felipe\source\repos\Doc\Doc.Repositorio\bin\Debug\netcoreapp2.0\Doc.Repositorio.deps.json
+C:\Users\Felipe\source\repos\Doc\Doc.Repositorio\bin\Debug\netcoreapp2.0\Doc.Repositorio.dll
+C:\Users\Felipe\source\repos\Doc\Doc.Repositorio\bin\Debug\netcoreapp2.0\Doc.Repositorio.pdb
+C:\Users\Felipe\source\repos\Doc\Doc.Repositorio\bin\Debug\netcoreapp2.0\Doc.Dominio.dll
+C:\Users\Felipe\source\repos\Doc\Doc.Repositorio\bin\Debug\netcoreapp2.0\Doc.Infra.Cross.dll
+C:\Users\Felipe\source\repos\Doc\Doc.Repositorio\bin\Debug\netcoreapp2.0\Doc.Infra.Data.dll
+C:\Users\Felipe\source\repos\Doc\Doc.Repositorio\bin\Debug\netcoreapp2.0\Doc.Dominio.pdb
+C:\Users\Felipe\source\repos\Doc\Doc.Repositorio\bin\Debug\netcoreapp2.0\Doc.Infra.Cross.pdb
+C:\Users\Felipe\source\repos\Doc\Doc.Repositorio\bin\Debug\netcoreapp2.0\Doc.Infra.Data.pdb
+C:\Users\Felipe\source\repos\Doc\Doc.Repositorio\obj\Debug\netcoreapp2.0\Doc.Repositorio.csprojAssemblyReference.cache
+C:\Users\Felipe\source\repos\Doc\Doc.Repositorio\obj\Debug\netcoreapp2.0\Doc.Repositorio.csproj.CoreCompileInputs.cache
+C:\Users\Felipe\source\repos\Doc\Doc.Repositorio\obj\Debug\netcoreapp2.0\Doc.Repositorio.AssemblyInfoInputs.cache
+C:\Users\Felipe\source\repos\Doc\Doc.Repositorio\obj\Debug\netcoreapp2.0\Doc.Repositorio.AssemblyInfo.cs
+C:\Users\Felipe\source\repos\Doc\Doc.Repositorio\obj\Debug\netcoreapp2.0\Doc.Repositorio.csproj.CopyComplete
+C:\Users\Felipe\source\repos\Doc\Doc.Repositorio\obj\Debug\netcoreapp2.0\Doc.Repositorio.dll
+C:\Users\Felipe\source\repos\Doc\Doc.Repositorio\obj\Debug\netcoreapp2.0\Doc.Repositorio.pdb
