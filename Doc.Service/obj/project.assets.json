@@ -13462,11 +13462,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Dev01\\Source\\Repos\\doc\\Doc.Service\\Doc.Service.csproj",
+      "projectUniqueName": "C:\\Work\\Documentos\\Doc.Service\\Doc.Service.csproj",
       "projectName": "Doc.Service",
-      "projectPath": "C:\\Users\\Dev01\\Source\\Repos\\doc\\Doc.Service\\Doc.Service.csproj",
+      "projectPath": "C:\\Work\\Documentos\\Doc.Service\\Doc.Service.csproj",
       "packagesPath": "C:\\Users\\Dev01\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Dev01\\Source\\Repos\\doc\\Doc.Service\\obj\\",
+      "outputPath": "C:\\Work\\Documentos\\Doc.Service\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -13485,14 +13485,14 @@
       "frameworks": {
         "netcoreapp2.0": {
           "projectReferences": {
-            "C:\\Users\\Dev01\\Source\\Repos\\doc\\Doc.Dominio\\Doc.Dominio.csproj": {
-              "projectPath": "C:\\Users\\Dev01\\Source\\Repos\\doc\\Doc.Dominio\\Doc.Dominio.csproj"
+            "C:\\Work\\Documentos\\Doc.Dominio\\Doc.Dominio.csproj": {
+              "projectPath": "C:\\Work\\Documentos\\Doc.Dominio\\Doc.Dominio.csproj"
             },
-            "C:\\Users\\Dev01\\Source\\Repos\\doc\\Doc.Infra.Cross\\Doc.Infra.Cross.csproj": {
-              "projectPath": "C:\\Users\\Dev01\\Source\\Repos\\doc\\Doc.Infra.Cross\\Doc.Infra.Cross.csproj"
+            "C:\\Work\\Documentos\\Doc.Infra.Cross\\Doc.Infra.Cross.csproj": {
+              "projectPath": "C:\\Work\\Documentos\\Doc.Infra.Cross\\Doc.Infra.Cross.csproj"
             },
-            "C:\\Users\\Dev01\\Source\\Repos\\doc\\Doc.Repositorio\\Doc.Repositorio.csproj": {
-              "projectPath": "C:\\Users\\Dev01\\Source\\Repos\\doc\\Doc.Repositorio\\Doc.Repositorio.csproj"
+            "C:\\Work\\Documentos\\Doc.Repositorio\\Doc.Repositorio.csproj": {
+              "projectPath": "C:\\Work\\Documentos\\Doc.Repositorio\\Doc.Repositorio.csproj"
             }
           }
         }

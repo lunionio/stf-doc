@@ -5,7 +5,6 @@ using Doc.Repositorio;
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
 using System.Threading.Tasks;
 
 namespace Doc.Infra.Cross
@@ -28,6 +27,7 @@ namespace Doc.Infra.Cross
                 await _service.ValidateTokenAsync(token);
                 entity.Status = 9;
                 entity.Ativo = false;
+                entity.DataEdicao = DateTime.UtcNow;
                 _repository.Update(entity);
             }
             catch (InvalidTokenException e)
@@ -40,12 +40,12 @@ namespace Doc.Infra.Cross
             }
         }
 
-        public async Task<IEnumerable<Documento>> GetAllAsync(int idCliente, string token)
+        public async Task<IEnumerable<Documento>> GetAllAsync(string token)
         {
             try
             {
                 await _service.ValidateTokenAsync(token);
-                var result = _repository.GetList(d => d.IdCliente.Equals(idCliente));
+                var result = _repository.GetList(d => d.Status != 9);
                 return result;
             }
             catch (InvalidTokenException e)
@@ -63,7 +63,7 @@ namespace Doc.Infra.Cross
             try
             {
                 await _service.ValidateTokenAsync(token);
-                var document = _repository.GetList(d => d.ID.Equals(entityId) && d.IdCliente.Equals(idCliente)).SingleOrDefault();
+                var document = _repository.GetList(d => d.ID.Equals(entityId) && d.IdCliente.Equals(idCliente) && d.Status != 9).SingleOrDefault();
                 return document;
             }
             catch (InvalidTokenException e)
@@ -124,7 +124,7 @@ namespace Doc.Infra.Cross
             try
             {
                 await _service.ValidateTokenAsync(token);
-                var documentos = _repository.GetList(d => d.IdCliente.Equals(idCliente));
+                var documentos = _repository.GetList(d => d.IdCliente.Equals(idCliente) && d.Status != 9);
                 return documentos;
             }
             catch (InvalidTokenException e)

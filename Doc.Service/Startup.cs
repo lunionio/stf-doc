@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Doc.Infra.Cross;
+using Doc.Repositorio;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
@@ -23,6 +25,12 @@ namespace Doc.Service
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            services.AddTransient<DocumentoRepository>();
+            services.AddTransient<SegurancaService>();
+            services.AddTransient<DocumentoCross>();
+            services.AddTransient<DocumentoLogRepository>();
+            services.AddTransient<DocumentoLogCross>();
+
             services.AddMvc();
         }
 

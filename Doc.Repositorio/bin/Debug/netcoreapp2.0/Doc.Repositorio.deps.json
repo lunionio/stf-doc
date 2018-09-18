@@ -9,7 +9,6 @@
       "Doc.Repositorio/1.0.0": {
         "dependencies": {
           "Doc.Dominio": "1.0.0",
-          "Doc.Infra.Cross": "1.0.0",
           "Doc.Infra.Data": "1.0.0"
         },
         "runtime": {
@@ -577,15 +576,6 @@
           "Doc.Dominio.dll": {}
         }
       },
-      "Doc.Infra.Cross/1.0.0": {
-        "dependencies": {
-          "Doc.Dominio": "1.0.0",
-          "Doc.Infra.Data": "1.0.0"
-        },
-        "runtime": {
-          "Doc.Infra.Cross.dll": {}
-        }
-      },
       "Doc.Infra.Data/1.0.0": {
         "dependencies": {
           "Doc.Dominio": "1.0.0",
@@ -982,11 +972,6 @@
       "hashPath": "system.threading.tasks.4.0.11.nupkg.sha512"
     },
     "Doc.Dominio/1.0.0": {
-      "type": "project",
-      "serviceable": false,
-      "sha512": ""
-    },
-    "Doc.Infra.Cross/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""
