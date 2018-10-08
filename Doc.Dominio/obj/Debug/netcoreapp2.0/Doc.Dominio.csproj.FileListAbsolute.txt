@@ -24,3 +24,12 @@ C:\Work\Documentos\Doc.Dominio\obj\Debug\netcoreapp2.0\Doc.Dominio.AssemblyInfoI
 C:\Work\Documentos\Doc.Dominio\obj\Debug\netcoreapp2.0\Doc.Dominio.AssemblyInfo.cs
 C:\Work\Documentos\Doc.Dominio\obj\Debug\netcoreapp2.0\Doc.Dominio.dll
 C:\Work\Documentos\Doc.Dominio\obj\Debug\netcoreapp2.0\Doc.Dominio.pdb
+C:\Work\WpDocumentos\Doc.Dominio\bin\Debug\netcoreapp2.0\Doc.Dominio.deps.json
+C:\Work\WpDocumentos\Doc.Dominio\bin\Debug\netcoreapp2.0\Doc.Dominio.dll
+C:\Work\WpDocumentos\Doc.Dominio\bin\Debug\netcoreapp2.0\Doc.Dominio.pdb
+C:\Work\WpDocumentos\Doc.Dominio\obj\Debug\netcoreapp2.0\Doc.Dominio.csprojAssemblyReference.cache
+C:\Work\WpDocumentos\Doc.Dominio\obj\Debug\netcoreapp2.0\Doc.Dominio.csproj.CoreCompileInputs.cache
+C:\Work\WpDocumentos\Doc.Dominio\obj\Debug\netcoreapp2.0\Doc.Dominio.AssemblyInfoInputs.cache
+C:\Work\WpDocumentos\Doc.Dominio\obj\Debug\netcoreapp2.0\Doc.Dominio.AssemblyInfo.cs
+C:\Work\WpDocumentos\Doc.Dominio\obj\Debug\netcoreapp2.0\Doc.Dominio.dll
+C:\Work\WpDocumentos\Doc.Dominio\obj\Debug\netcoreapp2.0\Doc.Dominio.pdb

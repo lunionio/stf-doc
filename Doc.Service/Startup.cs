@@ -26,9 +26,10 @@ namespace Doc.Service
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddTransient<DocumentoRepository>();
+            services.AddTransient<DocumentoStatusRepository>();
             services.AddTransient<SegurancaService>();
             services.AddTransient<DocumentoCross>();
-            services.AddTransient<DocumentoLogRepository>();
+            services.AddTransient<DocumentoLogRepository>(); 
             services.AddTransient<DocumentoLogCross>();
 
             services.AddMvc();

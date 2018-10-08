@@ -2372,7 +2372,7 @@
       ]
     },
     "System.Linq.Queryable/4.0.1": {
-      "sha512": "Yn/WfYe9RoRfmSLvUt2JerP0BTGGykCZkQPgojaxgzF2N0oPo+/AhB8TXOpdCcNlrG3VRtsamtK2uzsp3cqRVw==",
+      "sha512": "EdyFK6J3FS9hE82zsL23y7sFVYFeAckPsNmS7D3lGw0yLVLHarLVlZFfJZ73lGGu+ivGzxdons91fJh3dWugUw==",
       "type": "package",
       "path": "system.linq.queryable/4.0.1",
       "files": [
@@ -3457,11 +3457,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Work\\Documentos\\Doc.Repositorio\\Doc.Repositorio.csproj",
+      "projectUniqueName": "C:\\Work\\WpDocumentos\\Doc.Repositorio\\Doc.Repositorio.csproj",
       "projectName": "Doc.Repositorio",
-      "projectPath": "C:\\Work\\Documentos\\Doc.Repositorio\\Doc.Repositorio.csproj",
+      "projectPath": "C:\\Work\\WpDocumentos\\Doc.Repositorio\\Doc.Repositorio.csproj",
       "packagesPath": "C:\\Users\\Dev01\\.nuget\\packages\\",
-      "outputPath": "C:\\Work\\Documentos\\Doc.Repositorio\\obj\\",
+      "outputPath": "C:\\Work\\WpDocumentos\\Doc.Repositorio\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -3480,11 +3480,11 @@
       "frameworks": {
         "netcoreapp2.0": {
           "projectReferences": {
-            "C:\\Work\\Documentos\\Doc.Dominio\\Doc.Dominio.csproj": {
-              "projectPath": "C:\\Work\\Documentos\\Doc.Dominio\\Doc.Dominio.csproj"
+            "C:\\Work\\WpDocumentos\\Doc.Dominio\\Doc.Dominio.csproj": {
+              "projectPath": "C:\\Work\\WpDocumentos\\Doc.Dominio\\Doc.Dominio.csproj"
             },
-            "C:\\Work\\Documentos\\Doc.Infra.Data\\Doc.Infra.Data.csproj": {
-              "projectPath": "C:\\Work\\Documentos\\Doc.Infra.Data\\Doc.Infra.Data.csproj"
+            "C:\\Work\\WpDocumentos\\Doc.Infra.Data\\Doc.Infra.Data.csproj": {
+              "projectPath": "C:\\Work\\WpDocumentos\\Doc.Infra.Data\\Doc.Infra.Data.csproj"
             }
           }
         }

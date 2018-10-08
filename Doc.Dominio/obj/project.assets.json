@@ -670,11 +670,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Work\\Documentos\\Doc.Dominio\\Doc.Dominio.csproj",
+      "projectUniqueName": "C:\\Work\\WpDocumentos\\Doc.Dominio\\Doc.Dominio.csproj",
       "projectName": "Doc.Dominio",
-      "projectPath": "C:\\Work\\Documentos\\Doc.Dominio\\Doc.Dominio.csproj",
+      "projectPath": "C:\\Work\\WpDocumentos\\Doc.Dominio\\Doc.Dominio.csproj",
       "packagesPath": "C:\\Users\\Dev01\\.nuget\\packages\\",
-      "outputPath": "C:\\Work\\Documentos\\Doc.Dominio\\obj\\",
+      "outputPath": "C:\\Work\\WpDocumentos\\Doc.Dominio\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"

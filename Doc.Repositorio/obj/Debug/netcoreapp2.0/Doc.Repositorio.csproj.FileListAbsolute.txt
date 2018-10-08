@@ -44,3 +44,17 @@ C:\Work\Documentos\Doc.Repositorio\obj\Debug\netcoreapp2.0\Doc.Repositorio.Assem
 C:\Work\Documentos\Doc.Repositorio\obj\Debug\netcoreapp2.0\Doc.Repositorio.csproj.CopyComplete
 C:\Work\Documentos\Doc.Repositorio\obj\Debug\netcoreapp2.0\Doc.Repositorio.dll
 C:\Work\Documentos\Doc.Repositorio\obj\Debug\netcoreapp2.0\Doc.Repositorio.pdb
+C:\Work\WpDocumentos\Doc.Repositorio\bin\Debug\netcoreapp2.0\Doc.Repositorio.deps.json
+C:\Work\WpDocumentos\Doc.Repositorio\bin\Debug\netcoreapp2.0\Doc.Repositorio.dll
+C:\Work\WpDocumentos\Doc.Repositorio\bin\Debug\netcoreapp2.0\Doc.Repositorio.pdb
+C:\Work\WpDocumentos\Doc.Repositorio\bin\Debug\netcoreapp2.0\Doc.Dominio.dll
+C:\Work\WpDocumentos\Doc.Repositorio\bin\Debug\netcoreapp2.0\Doc.Infra.Data.dll
+C:\Work\WpDocumentos\Doc.Repositorio\bin\Debug\netcoreapp2.0\Doc.Dominio.pdb
+C:\Work\WpDocumentos\Doc.Repositorio\bin\Debug\netcoreapp2.0\Doc.Infra.Data.pdb
+C:\Work\WpDocumentos\Doc.Repositorio\obj\Debug\netcoreapp2.0\Doc.Repositorio.csprojAssemblyReference.cache
+C:\Work\WpDocumentos\Doc.Repositorio\obj\Debug\netcoreapp2.0\Doc.Repositorio.csproj.CoreCompileInputs.cache
+C:\Work\WpDocumentos\Doc.Repositorio\obj\Debug\netcoreapp2.0\Doc.Repositorio.AssemblyInfoInputs.cache
+C:\Work\WpDocumentos\Doc.Repositorio\obj\Debug\netcoreapp2.0\Doc.Repositorio.AssemblyInfo.cs
+C:\Work\WpDocumentos\Doc.Repositorio\obj\Debug\netcoreapp2.0\Doc.Repositorio.csproj.CopyComplete
+C:\Work\WpDocumentos\Doc.Repositorio\obj\Debug\netcoreapp2.0\Doc.Repositorio.dll
+C:\Work\WpDocumentos\Doc.Repositorio\obj\Debug\netcoreapp2.0\Doc.Repositorio.pdb

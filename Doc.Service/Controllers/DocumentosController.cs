@@ -179,5 +179,27 @@ namespace Doc.Service.Controllers
                 return StatusCode(500, "Ocorreu um erro ao buscar os documentos. Entre em contato com o suporte.");
             }
         }
+
+        [HttpGet("Validate/{codigoExterno:int}/{idCliente:int}/{token}")]
+        public async Task<IActionResult> ValidateAsync([FromRoute]int codigoExterno, [FromRoute]int idCliente, [FromRoute]string token)
+        {
+            try
+            {
+                await _dContext.ValidateAsync(codigoExterno, idCliente, token);
+                return Ok(true);
+            }
+            catch (InvalidTokenException e)
+            {
+                return new ObjectResult(false);
+            }
+            catch (DocumentoException e)
+            {
+                return new ObjectResult(false);
+            }
+            catch (Exception e)
+            {
+                return new ObjectResult(false);
+            }
+        }
     }
 }
