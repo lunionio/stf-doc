@@ -27,6 +27,7 @@ namespace Doc.Service
         {
             services.AddTransient<DocumentoRepository>();
             services.AddTransient<DocumentoStatusRepository>();
+            services.AddTransient<DocumentoTipoRepository>();
             services.AddTransient<SegurancaService>();
             services.AddTransient<DocumentoCross>();
             services.AddTransient<DocumentoLogRepository>(); 

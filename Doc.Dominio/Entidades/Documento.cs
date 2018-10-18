@@ -13,5 +13,8 @@ namespace Doc.Dominio.Entidades
 
         [NotMapped]
         public DocumentoTipo DocumentoTipo { get; set; }
+
+        [NotMapped]
+        public DocumentoStatus DocumentoStatus { get; set; }
     }
 }

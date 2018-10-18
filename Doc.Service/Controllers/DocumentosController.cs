@@ -3,6 +3,8 @@ using Doc.Infra.Cross;
 using Doc.Infra.Cross.Exceptions;
 using Microsoft.AspNetCore.Mvc;
 using System;
+using System.Collections;
+using System.Collections.Generic;
 using System.Threading.Tasks;
 
 namespace Doc.Service.Controllers
@@ -77,7 +79,7 @@ namespace Doc.Service.Controllers
             }
         }
 
-        [HttpDelete("{ipUsuario}/{token}")]
+        [HttpPost("{ipUsuario}/{token}")]
         public async Task<IActionResult> DeleteAsync([FromRoute]string token, [FromBody]Documento documento, [FromRoute]string ipUsuario)
         {
             try
@@ -199,6 +201,72 @@ namespace Doc.Service.Controllers
             catch (Exception e)
             {
                 return new ObjectResult(false);
+            }
+        }
+
+        [HttpGet("GetByCodigo/{codigoExterno:int}/{idCliente:int}/{token}")]
+        public async Task<IActionResult> GetByCodigoExternoAsync([FromRoute]int codigoExterno, [FromRoute]int idCliente, [FromRoute]string token)
+        {
+            try
+            {
+                var documentos = await _dContext.GetByCodigoExterno(codigoExterno, idCliente, token);
+                return Ok(documentos);
+            }
+            catch (InvalidTokenException e)
+            {
+                return StatusCode(401, $"{ e.Message } { e.InnerException.Message }");
+            }
+            catch (DocumentoException e)
+            {
+                return StatusCode(400, $"{ e.Message } { e.InnerException.Message }");
+            }
+            catch (Exception e)
+            {
+                return StatusCode(500, "Ocorreu um erro ao buscar os documentos. Entre em contato com o suporte.");
+            }
+        }
+
+        [HttpGet("GetAllStatus/{token}")]
+        public async Task<IActionResult> GetDocumentoStatuses([FromRoute]string token)
+        {
+            try
+            {
+                var statuses = await _dContext.GetDocumentoStatusesAsync(token);
+                return Ok(statuses);
+            }
+            catch (InvalidTokenException e)
+            {
+                return StatusCode(401, $"{ e.Message } { e.InnerException.Message }");
+            }
+            catch (DocumentoException e)
+            {
+                return StatusCode(400, $"{ e.Message } { e.InnerException.Message }");
+            }
+            catch (Exception e)
+            {
+                return StatusCode(500, "Ocorreu um erro ao buscar os statuses. Entre em contato com o suporte.");
+            }
+        }
+
+        [HttpPost("UpdateDocumentos/{token}")]
+        public async Task<IActionResult> UpdateDocumentos([FromRoute]string token, [FromBody]IEnumerable<Documento> documentos)
+        {
+            try
+            {
+                await _dContext.SaveAsync(documentos, token);
+                return Ok("Documentos atualizados com sucesso.");
+            }
+            catch (InvalidTokenException e)
+            {
+                return StatusCode(401, $"{ e.Message } { e.InnerException.Message }");
+            }
+            catch (DocumentoException e)
+            {
+                return StatusCode(400, $"{ e.Message } { e.InnerException.Message }");
+            }
+            catch (Exception e)
+            {
+                return StatusCode(500, "Ocorreu um erro ao tentar atualizar os documentos recebidos. Entre em contato com o suporte.");
             }
         }
     }

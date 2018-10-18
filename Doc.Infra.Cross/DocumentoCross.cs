@@ -14,13 +14,15 @@ namespace Doc.Infra.Cross
         private DocumentoRepository _repository;
         private DocumentoStatusRepository _sRepository;
         private SegurancaService _service;
+        private DocumentoTipoRepository _tRepository;
 
         public DocumentoCross(DocumentoRepository repository, 
-            SegurancaService service, DocumentoStatusRepository sRepository)
+            SegurancaService service, DocumentoStatusRepository sRepository, DocumentoTipoRepository tRepository)
         {
             _repository = repository;
             _service = service;
             _sRepository = sRepository;
+            _tRepository = tRepository;
         }
 
         public async Task DeleteAsync(Documento entity, string token)
@@ -182,6 +184,78 @@ namespace Doc.Infra.Cross
                             throw new DocumentoException("Há documentos reprovados.");
                         }
                     }
+                }
+            }
+            catch (InvalidTokenException e)
+            {
+                throw e;
+            }
+            catch (Exception e)
+            {
+                throw new DocumentoException("Não foi possível completar a operação.", e);
+            }
+        }
+
+        public async Task<IEnumerable<Documento>> GetByCodigoExterno(int codigoExterno, int idCliente, string token)
+        {
+            try
+            {
+                await _service.ValidateTokenAsync(token);
+                var documentos = _repository.GetList(d => d.IdCliente.Equals(idCliente)
+                                    && d.CodigoExterno.Equals(codigoExterno));
+
+                var docTipos = documentos.Select(d => d.Tipo);
+
+                var tipos = _tRepository.GetList(t => docTipos.Contains(t.ID));
+                var statuses = _sRepository.GetAll();
+
+                foreach (var item in documentos)
+                {
+                    item.DocumentoTipo = tipos.Where(t => t.ID.Equals(item.Tipo)).SingleOrDefault();
+                    item.DocumentoStatus = statuses.FirstOrDefault(s => s.ID.Equals(item.DocumentoStatusID));
+                }
+
+                return documentos;
+            }
+            catch (InvalidTokenException e)
+            {
+                throw e;
+            }
+            catch (Exception e)
+            {
+                throw new DocumentoException("Não foi possível completar a operação.", e);
+            }
+        }
+
+        public async Task<IEnumerable<DocumentoStatus>> GetDocumentoStatusesAsync(string token)
+        {
+            try
+            {
+                await _service.ValidateTokenAsync(token);
+
+                var statuses = _sRepository.GetAll();
+                return statuses;
+            }
+            catch (InvalidTokenException e)
+            {
+                throw e;
+            }
+            catch (Exception e)
+            {
+                throw new DocumentoException("Não foi possível completar a operação.", e);
+            }
+        }
+
+        public async Task SaveAsync(IEnumerable<Documento> entities, string token)
+        {
+            try
+            {
+                await _service.ValidateTokenAsync(token);
+                
+                foreach (var entity in entities)
+                {
+                    entity.DataEdicao = DateTime.UtcNow;
+                    _repository.Update(entity);
                 }
             }
             catch (InvalidTokenException e)
