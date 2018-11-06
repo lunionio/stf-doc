@@ -31,6 +31,7 @@ namespace Doc.Service
             services.AddTransient<SegurancaService>();
             services.AddTransient<DocumentoCross>();
             services.AddTransient<DocumentoLogRepository>(); 
+            services.AddTransient<DocStatusObservacoesRepository>();
             services.AddTransient<DocumentoLogCross>();
 
             services.AddMvc();

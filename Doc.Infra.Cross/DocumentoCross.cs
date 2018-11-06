@@ -13,16 +13,18 @@ namespace Doc.Infra.Cross
     {
         private DocumentoRepository _repository;
         private DocumentoStatusRepository _sRepository;
+        private DocStatusObservacoesRepository _dObsRep;
         private SegurancaService _service;
         private DocumentoTipoRepository _tRepository;
 
-        public DocumentoCross(DocumentoRepository repository, 
-            SegurancaService service, DocumentoStatusRepository sRepository, DocumentoTipoRepository tRepository)
+        public DocumentoCross(DocumentoRepository repository, SegurancaService service, 
+            DocumentoStatusRepository sRepository, DocumentoTipoRepository tRepository, DocStatusObservacoesRepository dObsRep)
         {
             _repository = repository;
             _service = service;
             _sRepository = sRepository;
             _tRepository = tRepository;
+            _dObsRep = dObsRep;
         }
 
         public async Task DeleteAsync(Documento entity, string token)
@@ -98,8 +100,7 @@ namespace Doc.Infra.Cross
                         var dId = _repository.Add(entity);
                         break;
                     default:
-                        entity.DataEdicao = DateTime.UtcNow;
-                        _repository.Update(entity);
+                        entity = await UpdateAsync(entity, token);
                         break;
                 }
 
@@ -123,6 +124,16 @@ namespace Doc.Infra.Cross
                 entity.DataEdicao = DateTime.UtcNow;
                 _repository.Update(entity);
 
+                if(entity.StatusObservacoes != null && entity.StatusObservacoes.ID > 0)
+                {
+                    _dObsRep.Update(entity.StatusObservacoes);
+                }
+                else if(entity.StatusObservacoes != null)
+                {
+                    var id = _dObsRep.Add(entity.StatusObservacoes);
+                    entity.StatusObservacoes.ID = id;
+                }
+
                 return entity;
             }
             catch (InvalidTokenException e)
@@ -141,6 +152,15 @@ namespace Doc.Infra.Cross
             {
                 await _service.ValidateTokenAsync(token);
                 var documentos = _repository.GetList(d => d.IdCliente.Equals(idCliente) && d.Status != 9);
+                var docIds = documentos.Select(d => d.ID);
+
+                var observacoes = _dObsRep.GetList(o => docIds.Contains(o.DocID));
+
+                foreach (var item in documentos)
+                {
+                    item.StatusObservacoes = observacoes.SingleOrDefault(o => o.DocID.Equals(item.ID));
+                }
+
                 return documentos;
             }
             catch (InvalidTokenException e)
@@ -204,6 +224,8 @@ namespace Doc.Infra.Cross
                 var documentos = _repository.GetList(d => d.IdCliente.Equals(idCliente)
                                     && d.CodigoExterno.Equals(codigoExterno));
 
+                var docIds = documentos.Select(d => d.ID);
+
                 var docTipos = documentos.Select(d => d.Tipo);
 
                 var tipos = _tRepository.GetList(t => docTipos.Contains(t.ID));
@@ -213,6 +235,7 @@ namespace Doc.Infra.Cross
                 {
                     item.DocumentoTipo = tipos.Where(t => t.ID.Equals(item.Tipo)).SingleOrDefault();
                     item.DocumentoStatus = statuses.FirstOrDefault(s => s.ID.Equals(item.DocumentoStatusID));
+                    item.StatusObservacoes = _dObsRep.GetSingle(o => docIds.Contains(o.DocID));
                 }
 
                 return documentos;
@@ -256,6 +279,16 @@ namespace Doc.Infra.Cross
                 {
                     entity.DataEdicao = DateTime.UtcNow;
                     _repository.Update(entity);
+
+                    if (entity.StatusObservacoes != null && entity.StatusObservacoes.ID > 0)
+                    {
+                        _dObsRep.Update(entity.StatusObservacoes);
+                    }
+                    else if (entity.StatusObservacoes != null)
+                    {
+                        var id = _dObsRep.Add(entity.StatusObservacoes);
+                        entity.StatusObservacoes.ID = id;
+                    }
                 }
             }
             catch (InvalidTokenException e)

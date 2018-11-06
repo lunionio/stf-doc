@@ -9,6 +9,7 @@ namespace Doc.Infra.Data
         public DbSet<DocumentoTipo> DocumentoTipo { get; set; }
         public DbSet<DocumentoLog> DocumentoLog { get; set; }
         public DbSet<DocumentoStatus> DocumentoStatus { get; set; }
+        public DbSet<DocStatusObservacoes> DocStatusObservacoes { get; set; }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {

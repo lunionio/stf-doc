@@ -10,11 +10,15 @@ namespace Doc.Dominio.Entidades
         public bool Requerido { get; set; }
         public int CodigoExterno { get; set; }
         public int DocumentoStatusID { get; set; }
+        public int DocStatusObsID { get; set; }
 
         [NotMapped]
         public DocumentoTipo DocumentoTipo { get; set; }
 
         [NotMapped]
         public DocumentoStatus DocumentoStatus { get; set; }
+
+        [NotMapped]
+        public DocStatusObservacoes StatusObservacoes { get; set; }
     }
 }
