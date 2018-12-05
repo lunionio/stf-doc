@@ -122,7 +122,6 @@ namespace Doc.Infra.Cross
             {
                 await _service.ValidateTokenAsync(token);
                 entity.DataEdicao = DateTime.UtcNow;
-                _repository.Update(entity);
 
                 if(entity.StatusObservacoes != null && entity.StatusObservacoes.ID > 0)
                 {
@@ -133,6 +132,8 @@ namespace Doc.Infra.Cross
                     var id = _dObsRep.Add(entity.StatusObservacoes);
                     entity.StatusObservacoes.ID = id;
                 }
+
+                _repository.Update(entity);
 
                 return entity;
             }
