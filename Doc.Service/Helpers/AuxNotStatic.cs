@@ -15,7 +15,7 @@ namespace Doc.Service.Services
             {
                 using (HttpClient client = new HttpClient())
                 {
-                    client.BaseAddress = new Uri("http://inapi.mundowebpix.com.br:5400");
+                    client.BaseAddress = new Uri("http://localhost:5400");
                     var url = "api/motoraux/acessarmotor/" + aux;
                     client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
                     HttpResponseMessage response = await client.GetAsync(url);

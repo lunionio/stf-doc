@@ -28,7 +28,7 @@ namespace Doc.Service.Controllers
             try
             {
                 var doc = await _dContext.SaveAsync(documento, token);
-                return Ok("Documento salvo com sucesso.");
+                return Ok(doc);
             }
             catch (InvalidTokenException e)
             {
@@ -267,6 +267,32 @@ namespace Doc.Service.Controllers
             catch (Exception e)
             {
                 return StatusCode(500, "Ocorreu um erro ao tentar atualizar os documentos recebidos. Entre em contato com o suporte.");
+            }
+        }
+
+        [HttpGet("Tipos/{token}")]
+        public async Task<IActionResult> GetAllTiposAsync([FromRoute]string token)
+        {
+            try
+            {
+                var tipos = await _dContext.GetTiposAsync(token);
+                return Ok(tipos);
+            }
+            catch (InvalidTokenException e)
+            {
+                return StatusCode(401, $"{ e.Message } { e.InnerException.Message }");
+            }
+            catch (ServiceException e)
+            {
+                return StatusCode(401, $"{ e.Message } { e.InnerException.Message }");
+            }
+            catch (DocumentoException e)
+            {
+                return StatusCode(400, $"{ e.Message } { e.InnerException.Message }");
+            }
+            catch (Exception e)
+            {
+                return StatusCode(500, "Ocorreu um erro ao buscar os documentos. Entre em contato com o suporte.");
             }
         }
     }

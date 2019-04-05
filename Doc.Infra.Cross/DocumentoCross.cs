@@ -4,6 +4,7 @@ using Doc.Infra.Cross.Generics;
 using Doc.Repositorio;
 using System;
 using System.Collections.Generic;
+using System.Globalization;
 using System.Linq;
 using System.Threading.Tasks;
 
@@ -34,7 +35,7 @@ namespace Doc.Infra.Cross
                 await _service.ValidateTokenAsync(token);
                 entity.Status = 9;
                 entity.Ativo = false;
-                entity.DataEdicao = DateTime.UtcNow;
+                entity.DataEdicao = DateTime.Now;
                 _repository.Update(entity);
             }
             catch (InvalidTokenException e)
@@ -92,8 +93,8 @@ namespace Doc.Infra.Cross
                 switch (entity.ID)
                 {
                     case 0:
-                        entity.DataCriacao = DateTime.UtcNow;
-                        entity.DataEdicao = DateTime.UtcNow;
+                        entity.DataCriacao = DateTime.Parse(DateTime.Now.ToShortDateString(), CultureInfo.GetCultureInfo("pt-BR"));
+                        entity.DataEdicao = DateTime.Parse(DateTime.Now.ToShortDateString(), CultureInfo.GetCultureInfo("pt-BR"));
                         entity.DocumentoStatusID = 1; //Pendente
                         entity.Ativo = true;
 
@@ -121,9 +122,9 @@ namespace Doc.Infra.Cross
             try
             {
                 await _service.ValidateTokenAsync(token);
-                entity.DataEdicao = DateTime.UtcNow;
+                entity.DataEdicao = DateTime.Parse(DateTime.Now.ToShortDateString(), CultureInfo.GetCultureInfo("pt-BR"));
 
-                if(entity.StatusObservacoes != null && entity.StatusObservacoes.ID > 0)
+                if (entity.StatusObservacoes != null && entity.StatusObservacoes.ID > 0)
                 {
                     _dObsRep.Update(entity.StatusObservacoes);
                 }
@@ -278,7 +279,7 @@ namespace Doc.Infra.Cross
                 
                 foreach (var entity in entities)
                 {
-                    entity.DataEdicao = DateTime.UtcNow;
+                    entity.DataEdicao = DateTime.Parse(DateTime.Now.ToShortDateString(), CultureInfo.GetCultureInfo("pt-BR"));
                     _repository.Update(entity);
 
                     if (entity.StatusObservacoes != null && entity.StatusObservacoes.ID > 0)
@@ -299,6 +300,28 @@ namespace Doc.Infra.Cross
             catch (Exception e)
             {
                 throw new DocumentoException("Não foi possível completar a operação.", e);
+            }
+        }
+
+        public async Task<IEnumerable<DocumentoTipo>> GetTiposAsync(string token)
+        {
+            try
+            {
+                await _service.ValidateTokenAsync(token);
+                var result = _tRepository.GetList(d => d.Status != 9 && d.Ativo);
+                return result;
+            }
+            catch (InvalidTokenException e)
+            {
+                throw e;
+            }
+            catch (ServiceException e)
+            {
+                throw e;
+            }
+            catch (Exception e)
+            {
+                throw new DocumentoException("Não foi possível recuperar os tipos de documentos.", e);
             }
         }
     }
