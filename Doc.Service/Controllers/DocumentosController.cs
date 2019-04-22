@@ -3,7 +3,6 @@ using Doc.Infra.Cross;
 using Doc.Infra.Cross.Exceptions;
 using Microsoft.AspNetCore.Mvc;
 using System;
-using System.Collections;
 using System.Collections.Generic;
 using System.Threading.Tasks;
 
@@ -27,6 +26,13 @@ namespace Doc.Service.Controllers
         {
             try
             {
+                var result = _dContext.GetByNumero(documento.Numero);
+
+                if(result != null && result.ID > 0)
+                {
+                    return Ok(false);
+                }
+
                 var doc = await _dContext.SaveAsync(documento, token);
                 return Ok(doc);
             }

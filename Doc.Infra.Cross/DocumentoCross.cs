@@ -28,6 +28,19 @@ namespace Doc.Infra.Cross
             _dObsRep = dObsRep;
         }
 
+        public Documento GetByNumero(string numero)
+        {
+            try
+            {
+                var result = _repository.GetSingle(d => d.Numero.Equals(numero));
+                return result;
+            }
+            catch (Exception e)
+            {
+                throw new DocumentoException("Não foi possível recuperar o documento.", e);
+            }
+        }
+
         public async Task DeleteAsync(Documento entity, string token)
         {
             try
